@@ -13,7 +13,7 @@ namespace MyCShapeWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string SelectedPath;
+        public string SelectedPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
         public ArrayList IpList = new ArrayList();
         public int CurrentPos = 0;
 
@@ -26,15 +26,16 @@ namespace MyCShapeWPF
 
         public void LoadData()
         {
+            label1.Content = SelectedPath;
             string userPath = null;
-            string path = @"C:\Users\Klavor\AppData\Local\Packages\";
+            string path = System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages";
             DirectoryInfo root = new DirectoryInfo(path);
             DirectoryInfo[] dics = root.GetDirectories();
             foreach (DirectoryInfo di in dics)
             {
                 if (di.Name.StartsWith("Microsoft.Windows.ContentDeliveryManager_"))
                 {
-                    userPath = di.FullName + "\\LocalState\\TargetedContentCache";
+                    userPath = di.FullName + @"\LocalState\TargetedContentCache";
                     break;
                 }
             }
@@ -48,7 +49,7 @@ namespace MyCShapeWPF
                     FileInfo[] files = d.GetFiles();
                     foreach (FileInfo file in files)
                     {
-                        string text = System.IO.File.ReadAllText(@file.FullName);
+                        string text = System.IO.File.ReadAllText(file.FullName);
                         JavaScriptSerializer js = new JavaScriptSerializer();//实例化一个能够序列化数据的类
                         Info list = js.Deserialize<Info>(text); //将json数据转化为对象类型并赋值给list
                         if (list.Name == "LockScreen")
@@ -63,6 +64,11 @@ namespace MyCShapeWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (SelectedPath == null)
+            {
+                MessageBox.Show("Please select a folder to save images.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
             foreach(InfoProperties ip in IpList)
             {
                 LandscapeImage landscapeImage = ip.LandscapeImage;
@@ -89,6 +95,8 @@ namespace MyCShapeWPF
                     To = SelectedPath + "\\"+ name2+".jpg"
                 };
                 cp2.Start(o2);
+
+                MessageBox.Show("Save Images success!", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -112,7 +120,7 @@ namespace MyCShapeWPF
         {
             CopyFileInfo c = obj as CopyFileInfo;
 
-            byte[] fromb = File.ReadAllBytes(@c.From);
+            byte[] fromb = File.ReadAllBytes(c.From);
             File.WriteAllBytes(c.To, fromb);
         }
 
