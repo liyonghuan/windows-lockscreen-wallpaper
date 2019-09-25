@@ -49,13 +49,28 @@ namespace MyCShapeWPF
                     FileInfo[] files = d.GetFiles();
                     foreach (FileInfo file in files)
                     {
-                        string text = System.IO.File.ReadAllText(file.FullName);
+                        string text = File.ReadAllText(file.FullName);
                         JavaScriptSerializer js = new JavaScriptSerializer();//实例化一个能够序列化数据的类
-                        Info list = js.Deserialize<Info>(text); //将json数据转化为对象类型并赋值给list
-                        if (list.Name == "LockScreen")
+                        Info info = js.Deserialize<Info>(text); //将json数据转化为对象类型并赋值给list
+                        if (info.Name == "LockScreen")
                         {
-                            InfoProperties infoProperties = list.Properties;
+                            InfoProperties infoProperties = info.Properties;
                             IpList.Add(infoProperties);
+
+#if DEBUG
+                            string mydir = System.Environment.CurrentDirectory;
+                            int pos = mydir.LastIndexOf("MyCShapeWPF");
+                            string baseMydir = mydir.Substring(0, pos);
+                            string imageDir = baseMydir + @"images\";
+                            string jsonDir = baseMydir + @"json\";
+                            File.WriteAllText(jsonDir + file.Name + ".json", text);
+                            LandscapeImage li = infoProperties.LandscapeImage;
+                            string liPath = li.Image;
+                            File.WriteAllBytes(imageDir + liPath.Substring(liPath.LastIndexOf('\\') + 1) + ".jpg", File.ReadAllBytes(liPath));
+                            PortraitImage pi = infoProperties.PortraitImage;
+                            string piPath = pi.Image;
+                            File.WriteAllBytes(imageDir + piPath.Substring(piPath.LastIndexOf('\\') + 1) + ".jpg", File.ReadAllBytes(piPath));
+#endif
                         }
                     }
                 }
