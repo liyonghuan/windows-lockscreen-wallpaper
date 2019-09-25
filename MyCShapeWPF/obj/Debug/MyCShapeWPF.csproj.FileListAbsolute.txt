@@ -1,0 +1,15 @@
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\bin\Debug\MyCShapeWPF.exe.config
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\bin\Debug\MyCShapeWPF.exe
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\bin\Debug\MyCShapeWPF.pdb
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.csprojAssemblyReference.cache
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\App.g.cs
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF_MarkupCompile.cache
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF_MarkupCompile.lref
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MainWindow.baml
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.g.resources
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.Properties.Resources.resources
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.csproj.GenerateResource.cache
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.csproj.CoreCompileInputs.cache
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.exe
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\MyCShapeWPF.pdb
