@@ -7,11 +7,11 @@ using System.Windows;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("MyCShapeWPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Windows Lockscreen Wallpaper")]
+[assembly: AssemblyDescription("The tool can help you what fluently to save windows lockscreen wallpaper.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyCShapeWPF")]
+[assembly: AssemblyCompany("devlang.org")]
+[assembly: AssemblyProduct("Windows Lockscreen Wallpaper")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,14 +1,14 @@
-﻿MyCShapeWPF
+﻿WindowsLockscreenWallpaper
 
 
 winexe
 C#
 .cs
-C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Debug\
-MyCShapeWPF
+C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\obj\Release\
+WindowsLockscreenWallpaper
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Klavor\Workspace\VirsualStudio\MyCShapeWPF\MyCShapeWPF\MyCShapeWPF\App.xaml
 11151548125
 
